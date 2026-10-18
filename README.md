@@ -2,7 +2,7 @@
 
 A Power BI Desktop starter project for a retrospective analysis of the 2026 FIFA World Cup dataset published by [mominullptr on Kaggle](https://www.kaggle.com/datasets/mominullptr/fifa-world-cup-2026-dataset).
 
-> **Data note:** This project consumes a community-maintained dataset and its public CSV mirror. The publisher describes it as a completed 104-match tournament dataset; this project does not independently certify the match results as official FIFA data. Verify key facts against official sources before publication.
+> **Data note:** This project consumes a community-maintained dataset and its direct public CSV files. The publisher describes it as a completed 104-match tournament dataset; this project does not independently certify the match results as official FIFA data. Verify key facts against official sources before publication.
 
 ## Project contents
 
@@ -27,6 +27,6 @@ The repository initially contained no files; this commit establishes the baselin
 
 - Kaggle: https://www.kaggle.com/datasets/mominullptr/fifa-world-cup-2026-dataset
 - Dataset repository: https://github.com/mominullptr/FIFA-World-Cup-2026-Dataset
-- Public CSV mirror used by Power Query: https://mominullptr.github.io/FIFA-World-Cup-2026-Dataset/
+- Public CSV mirror used by Power Query: https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/
 
 The mirror avoids a Kaggle API token and remains attributable to the dataset publisher. See `data/README.md` for local CSV loading options and refresh caveats.
