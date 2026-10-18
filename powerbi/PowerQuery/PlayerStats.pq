@@ -1,6 +1,6 @@
 let
     Source = Csv.Document(
-        Web.Contents("https://mominullptr.github.io/FIFA-World-Cup-2026-Dataset/", [RelativePath = "player_stats.csv"]),
+        Web.Contents("https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/", [RelativePath = "player_stats.csv"]),
         [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]
     ),
     Headers = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
