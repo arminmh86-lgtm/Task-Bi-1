@@ -1,24 +1,82 @@
 {
   "name": "World Cup 2026 — Night Stadium",
-  "dataColors": ["#D7F75B", "#56D6D1", "#FF8A5B", "#8B9EFF", "#F8D66D", "#EE6C9B", "#77C58B", "#A5B4C8"],
+  "dataColors": [
+    "#D7F75B",
+    "#56D6D1",
+    "#FF8A5B",
+    "#8B9EFF",
+    "#F8D66D",
+    "#EE6C9B",
+    "#77C58B",
+    "#A5B4C8"
+  ],
   "background": "#08111F",
   "foreground": "#F4F7FB",
+  "firstLevelElements": "#F4F7FB",
+  "secondLevelElements": "#D9E2F0",
+  "thirdLevelElements": "#2B3D53",
+  "fourthLevelElements": "#9DB0C8",
+  "secondaryBackground": "#101D30",
   "tableAccent": "#D7F75B",
   "good": "#77C58B",
   "neutral": "#F8D66D",
   "bad": "#FF6B6B",
-  "visualStyles": {
-    "*": {
-      "*": [
-        { "fontFamily": "Aptos", "fontSize": 10, "color": { "solid": { "color": "#F4F7FB" } } },
-        { "background": [{ "color": { "solid": { "color": "#101D30" } }, "transparency": 6 }] },
-        { "title": [{ "show": true, "fontSize": 12, "fontFamily": "Aptos Display", "color": { "solid": { "color": "#F4F7FB" } } }] }
-      ]
+  "textClasses": {
+    "callout": {
+      "fontSize": 28,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#F4F7FB"
     },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#F4F7FB"
+    },
+    "title": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#F4F7FB"
+    },
+    "largeTitle": {
+      "fontSize": 14,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#F4F7FB"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#D9E2F0"
+    }
+  },
+  "visualStyles": {
     "page": {
-      "*": [
-        { "background": [{ "color": { "solid": { "color": "#08111F" } }, "transparency": 0 }]
-      ]
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#08111F"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#050B14"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "pageSize": [
+          {
+            "pageSizeTypes": "Widescreen"
+          }
+        ]
+      }
     }
   }
 }
