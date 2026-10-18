@@ -1,0 +1,73 @@
+-- Add to a dedicated Measures table in Power BI Desktop.
+
+Matches Analyzed = DISTINCTCOUNT ( TeamMatchFacts[match_id] )
+
+Completed Matches =
+CALCULATE (
+    DISTINCTCOUNT ( TeamMatchFacts[match_id] ),
+    TeamMatchFacts[status] = "Completed"
+)
+
+Total Goals = SUM ( TeamMatchFacts[team_goals] )
+
+Goals per Match = DIVIDE ( [Total Goals], [Completed Matches] )
+
+Total Expected Goals = SUM ( TeamMatchFacts[team_xg] )
+
+Expected Goals per Match = DIVIDE ( [Total Expected Goals], [Completed Matches] )
+
+Matches Won = CALCULATE ( COUNTROWS ( TeamMatchFacts ), TeamMatchFacts[result] = "Win" )
+
+Matches Drawn = CALCULATE ( COUNTROWS ( TeamMatchFacts ), TeamMatchFacts[result] = "Draw" )
+
+Matches Lost = CALCULATE ( COUNTROWS ( TeamMatchFacts ), TeamMatchFacts[result] = "Loss" )
+
+Team Matches Played =
+CALCULATE (
+    COUNTROWS ( TeamMatchFacts ),
+    TeamMatchFacts[result] <> "Not played"
+)
+
+Win Rate = DIVIDE ( [Matches Won], [Team Matches Played] )
+
+Goal Difference = SUM ( TeamMatchFacts[team_goals] ) - SUM ( TeamMatchFacts[opponent_goals] )
+
+Clean Sheets =
+CALCULATE (
+    COUNTROWS ( TeamMatchFacts ),
+    TeamMatchFacts[opponent_goals] = 0,
+    TeamMatchFacts[status] = "Completed"
+)
+
+Player Goals = SUM ( PlayerStats[goals] )
+
+Player Assists = SUM ( PlayerStats[assists] )
+
+Player Goal Contributions = [Player Goals] + [Player Assists]
+
+Player Minutes = SUM ( PlayerStats[minutes_played] )
+
+Yellow Cards = SUM ( PlayerStats[yellow_cards] )
+
+Red Cards = SUM ( PlayerStats[red_cards] )
+
+Player Clean Sheets = SUM ( PlayerStats[clean_sheets] )
+
+Squad Market Value (€M) = DIVIDE ( SUM ( Players[market_value_eur] ), 1000000 )
+
+Average Possession % = AVERAGE ( MatchTeamStats[possession_pct] )
+
+Total Shots = SUM ( MatchTeamStats[total_shots] )
+
+Shots on Target = SUM ( MatchTeamStats[shots_on_target] )
+
+Shot Accuracy % = DIVIDE ( [Shots on Target], [Total Shots] )
+
+Corners = SUM ( MatchTeamStats[corners] )
+
+Fouls = SUM ( MatchTeamStats[fouls] )
+
+Match Events = COUNTROWS ( MatchEvents )
+
+-- Use for visuals built directly from the Matches table.
+Match Count (Match Table) = DISTINCTCOUNT ( Matches[match_id] )
