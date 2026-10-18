@@ -1,9 +1,9 @@
 # Data and refresh
 
-## Default source: public CSV mirror
-Power Query templates use the publisher-maintained CSV files at:
+## Default source: direct public CSV files
+Power Query templates use the publisher's CSV files directly from the upstream GitHub repository:
 
-`https://mominullptr.github.io/FIFA-World-Cup-2026-Dataset/`
+`https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/`
 
 This avoids a Kaggle API token. Select **Refresh** in Power BI Desktop to reload the latest available version.
 
