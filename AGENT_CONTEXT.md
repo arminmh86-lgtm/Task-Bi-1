@@ -8,7 +8,7 @@ The repository was empty when inspected. No agent instructions, prompts, coding 
 
 ## Constraints and principles
 - Deliver this repo as a **Power BI Desktop implementation kit**, not a generated `.pbix` binary. Power BI Desktop is required to finish the native report.
-- The user requested the Kaggle dataset. Queries use the dataset publisher's public CSV mirror to avoid Kaggle credentials.
+- The user requested the Kaggle dataset. Queries use the dataset publisher's direct public CSV files to avoid Kaggle credentials.
 - Attribute the dataset and do not call it an official FIFA feed. Its data has not been independently audited by this project.
 - Preserve names and accents using UTF-8.
 - Convert missing optional numbers to null rather than inventing values.
@@ -19,7 +19,7 @@ The repository was empty when inspected. No agent instructions, prompts, coding 
 ## Data sources
 - Kaggle: https://www.kaggle.com/datasets/mominullptr/fifa-world-cup-2026-dataset
 - Dataset repository: https://github.com/mominullptr/FIFA-World-Cup-2026-Dataset
-- CSV mirror base: https://mominullptr.github.io/FIFA-World-Cup-2026-Dataset/
+- CSV mirror base: https://raw.githubusercontent.com/mominullptr/FIFA-World-Cup-2026-Dataset/main/
 
 ## Model intent
 - `Matches`: one row per match.
